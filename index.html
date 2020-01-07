@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <!-- 구글 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <!-- 제이쿼리 -->
-     <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+    <!-- counter.js 동작용 - 제이쿼리 버전 1.0으로 변경 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- bxslider CSS -->
     <link rel="stylesheet" href="js/bxslider/jquery.bxslider.min.css">
     <!-- bxslider -->
@@ -20,6 +23,7 @@
 
 
 </head>
+
 <body>
     <header id="main_header">
         <div class="container">
@@ -89,12 +93,12 @@
 
     <section id="introduce">
         <div class="container">
-           <ul>
-               <a href="#"><img src="./images/img_01.png" alt="01"></a>
-               <a href="#"><img src="./images/img_02.png" alt="02"></a>
-               <a href="#"><img src="./images/img_03.png" alt="03"></a>
-               <a href="#"><img src="./images/img_04.png" alt="04"></a>
-           </ul>
+            <ul>
+                <a href="#"><img src="./images/img_01.png" alt="01"></a>
+                <a href="#"><img src="./images/img_02.png" alt="02"></a>
+                <a href="#"><img src="./images/img_03.png" alt="03"></a>
+                <a href="#"><img src="./images/img_04.png" alt="04"></a>
+            </ul>
         </div>
     </section>
 
@@ -102,7 +106,7 @@
         <div class="container">
             <article class="left">
                 <ul>
-                    <li>2167명</li>
+                    <li><span class="counter">2167</span>명</li>
                     <li>사람 조합원</li>
                 </ul>
                 <ul>
@@ -112,9 +116,9 @@
             </article>
             <article class="center">
                 <p>해마루에 방문하시거나 <br> 가입 신청 페이지를 통해 신청서를 작성하시고 <br>
-                출자금(가입시 1회, 최저 5만원)을 아래 계좌로 납부하시면 <br> 조합 승인을 거쳐 가입이 완료됩니다. <br>
-                가입이 완료되면 출자 확인서를 문자로 보내드립니다. <br> 해마루 동물병원은 조합원이 아니라도 이용할 수 있고, <br>
-                진료를 받으신 후 가입할 수 있습니다.</p>
+                    출자금(가입시 1회, 최저 5만원)을 아래 계좌로 납부하시면 <br> 조합 승인을 거쳐 가입이 완료됩니다. <br>
+                    가입이 완료되면 출자 확인서를 문자로 보내드립니다. <br> 해마루 동물병원은 조합원이 아니라도 이용할 수 있고, <br>
+                    진료를 받으신 후 가입할 수 있습니다.</p>
                 <button> 가입안내 </button>
             </article>
             <article class="right">
@@ -125,18 +129,18 @@
 
     <section id="link_box">
         <div class="container">
-               <div class="top">
-                   <a href="#"><img src="images/box_1.jpg" alt="link_01"></a>
-                   <a href="#"><img src="images/box_2.jpg" alt="link_02"></a>
-                   <a href="#"><img src="images/box_3.jpg" alt="link_03"></a>
-                   <a href="#"><img src="images/box_4.jpg" alt="link_04"></a>
-               </div>
-               <div class="bottom">
-                   <a href="#"><img src="images/box_5.jpg" alt="link_05"></a>
-                   <a href="#"><img src="images/box_6.jpg" alt="link_06"></a>
-                   <a href="#"><img src="images/box_7.jpg" alt="link_07"></a>
-                   <a href="#"><img src="images/box_8.jpg" alt="link_08"></a>
-               </div>
+            <div class="top">
+                <a href="#"><img src="images/box_1.jpg" alt="link_01"></a>
+                <a href="#"><img src="images/box_2.jpg" alt="link_02"></a>
+                <a href="#"><img src="images/box_3.jpg" alt="link_03"></a>
+                <a href="#"><img src="images/box_4.jpg" alt="link_04"></a>
+            </div>
+            <div class="bottom">
+                <a href="#"><img src="images/box_5.jpg" alt="link_05"></a>
+                <a href="#"><img src="images/box_6.jpg" alt="link_06"></a>
+                <a href="#"><img src="images/box_7.jpg" alt="link_07"></a>
+                <a href="#"><img src="images/box_8.jpg" alt="link_08"></a>
+            </div>
         </div>
     </section>
 
@@ -154,7 +158,7 @@
                 <li>
                     <a href="#"><img src="images/logo.png" alt="flogo"></a>
                     <p>우리동물병원생명사회적협동조합 <br> 서울시 마포구 성산동 17-23. 1층 동물병원
-                    15층 미 <br> 용실. 2층 카페. 사무국</p>
+                        15층 미 <br> 용실. 2층 카페. 사무국</p>
                 </li>
                 <li>
                     전화 : 02-335-3333 <br> (내선 1번 동물병원 , 내성 2번 조합사무국) <br>
@@ -166,5 +170,19 @@
             </ul>
         </div>
     </footer>
+
+    <!-- 카운트 라이브러리 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script>
+
+        // 카운트 될 요소 위치
+        $('.counter').counterUp({
+            delay: 10,
+            time: 2000
+        });
+
+    </script>
 </body>
+
 </html>
